@@ -1,0 +1,175 @@
+:root {
+    --primary-cyan: hsl(178, 100%, 50%);
+    --primary-soft-blue: hsl(215, 51%, 70%);
+    --neutral-very-dark-blue-card: hsl(216, 50%, 16%);
+    --neutral-very-dark-blue-lene: hsl(215, 32%, 27%);
+    --neutral-very-dark-blue-main: hsl(217, 54%, 11%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: var(--neutral-very-dark-blue-main);
+    color: var(--white);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 20px;
+    width: 100vw;
+}
+
+.card-container {
+    background-color: var(--neutral-very-dark-blue-card);
+    border-radius: 15px;
+    margin: auto;
+    padding: 22px 24px;
+    max-width: 332px;
+    -webkit-box-shadow: 0px 13px 32px 10px rgba(12, 23, 41, 0.76);
+    box-shadow: 0px 13px 32px 10px rgba(12, 23, 41, 0.76);
+}
+
+.card-container .card-img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+
+}
+
+.card-container .card-title {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 16px 0px;
+}
+
+.card-container .card-description {
+    color: var(--primary-soft-blue);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+}
+
+.card-container .card-info {
+    color: var(--primary-soft-blue);
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0px 12px 0px;
+}
+
+.card-container .card-info-text {
+    align-items: center;
+}
+
+.card-container .card-info-text .fa-ethereum {
+    color: var(--primary-cyan);
+}
+
+.card-container .card-info .card-info-value {
+    color: var(--primary-cyan);
+    font-weight: 400;
+    padding-left: 8px;
+}
+
+.card-info-date {
+    padding-left: 8px;
+}
+
+.card-container hr {
+    border-color: var(--neutral-very-dark-blue-lene);
+    margin: 4px 0px;
+}
+
+.card-container .card-profile {
+    align-items: center;
+    display: flex;
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+.card-container .card-profile img {
+    border-color: var(--white);
+    height: 36px;
+    width: 36px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.card-container .card-profile p {
+    padding-left: 12px;
+    color: var(--primary-soft-blue);
+}
+
+.card-container .card-profile span {
+    cursor: pointer;
+    color: var(--white);
+}
+
+.card-img-container {
+    position: relative;
+}
+
+.overlay {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transform: translate(0, -2px);
+    transition: .5s ease;
+    background-color: var(--primary-cyan);
+}
+
+.card-img-container:hover .overlay {
+    opacity: .54;
+}
+
+.card-img-container:hover .fa-eye {
+    opacity: 1;
+}
+
+.fa-eye {
+    color: var(--white);
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: .5s ease;
+    opacity: 0;
+}
+
+.card-img-container:hover .fa-eye {
+    opacity: 1;
+}
+
+.card-container .card-title:hover {
+    color: var(--primary-cyan);
+}
+
+.card-container .card-profile span:hover {
+    color: var(--primary-cyan);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100vw;
+}
+
+.attribution a {
+    color: hsl(216, 91%, 71%);
+}
